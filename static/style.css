@@ -1,24 +1,20 @@
-/* static/style.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Enhance button hover effects */
 button:hover {
     opacity: 0.9;
     transition: opacity 0.2s ease-in-out;
 }
 
-/* Ensure audio player is styled nicely */
 #audio-player {
     width: 100%;
     max-width: 300px;
     margin-top: 1rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 640px) {
     h1 {
         font-size: 1.25rem;
@@ -31,8 +27,7 @@ button:hover {
     }
 }
 
-/* Status text styling */
 #status {
     font-size: 0.9rem;
-    color: #4a5568; /* Matches Tailwind's text-gray-600 */
+    color: #4a5568;
 }
