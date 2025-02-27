@@ -1,7 +1,3 @@
-
----
-
-```markdown
 # Real-Time Healthcare Translation Web App
 
 This is a web application that enables real-time multilingual translation for healthcare communication. It converts spoken input into text, translates it into a user-selected language, and provides audio playback of the translated text. Built with Python (Flask) and JavaScript, it leverages the Web Speech API for speech recognition and is deployed on Vercel for accessibility.
@@ -24,7 +20,7 @@ Visit the live app: [https://realtime-healthcare-translation.vercel.app](https:/
 - **Git**: For version control and deployment.
 
 ## Project Structure
-```
+
 realtime-healthcare-translation/
 ├── api/
 │   └── translate.py       # Flask backend for translation and TTS
@@ -37,7 +33,7 @@ realtime-healthcare-translation/
 ├── requirements.txt      # Python dependencies
 ├── vercel.json           # Vercel deployment configuration
 └── README.md             # This file
-```
+
 
 ## Setup Locally
 
