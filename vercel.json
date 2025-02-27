@@ -11,7 +11,7 @@
     ],
     "routes": [
         {
-            "src": "/api/translate",
+            "src": "/translate",
             "dest": "api/translate.py"
         },
         {
@@ -21,6 +21,10 @@
         {
             "src": "/static/(.*)",
             "dest": "/static/$1"
+        },
+        {
+            "src": "/",
+            "dest": "api/translate.py"
         },
         {
             "src": "/(.*)",
