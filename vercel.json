@@ -3,12 +3,19 @@
     "builds": [
         {
             "src": "api/translate.py",
-            "use": "@vercel/python"
+            "use": "@vercel/python",
+            "config": {
+                "maxLambdaSize": "15mb"
+            }
         }
     ],
     "routes": [
         {
             "src": "/api/translate",
+            "dest": "api/translate.py"
+        },
+        {
+            "src": "/audio/(.*)",
             "dest": "api/translate.py"
         },
         {
@@ -19,5 +26,8 @@
             "src": "/(.*)",
             "dest": "api/translate.py"
         }
-    ]
+    ],
+    "env": {
+        "PYTHONPATH": "."
+    }
 }
