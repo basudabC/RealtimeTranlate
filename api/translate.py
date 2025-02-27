@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory, render_template
 from deep_translator import GoogleTranslator
 from gtts import gTTS
 import os
@@ -10,6 +10,12 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__, static_folder='../static', static_url_path='/static')
+
+@app.route('/')
+def index():
+    """Serve the homepage"""
+    logger.debug("Serving index.html")
+    return render_template('index.html')
 
 @app.route('/translate', methods=['POST'])
 def translate():
@@ -57,5 +63,3 @@ def serve_audio(filename):
     except Exception as e:
         logger.error(f"Error serving audio: {str(e)}")
         return jsonify({'error': 'Audio file not found'}), 404
-
-# No custom handler needed; Flask's app is WSGI-compatible
