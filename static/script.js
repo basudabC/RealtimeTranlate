@@ -30,7 +30,7 @@ recognition.onresult = (event) => {
     const outputLang = document.getElementById('output-lang').value;
     document.getElementById('status').textContent = 'Processing...';
 
-    fetch('/api/translate', {
+    fetch('/translate', {  // Changed from '/api/translate' to '/translate'
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ transcript, input_lang: inputLang, output_lang: outputLang })
