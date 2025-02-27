@@ -1,0 +1,4 @@
+Flask==2.3.2
+deep_translator==1.11.4
+gtts==2.5.1
+gunicorn==20.1.0
